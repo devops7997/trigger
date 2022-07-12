@@ -5,6 +5,7 @@
 
 trigger:
 - main
+- Dev
 
 pool:
   vmImage: ubuntu-latest
