@@ -8,9 +8,7 @@ trigger: none
 pr:
  autoCancel: true
  drafts: false
- branches:
-   include:
-     - Dev
+
 
 pool:
   vmImage: ubuntu-latest
