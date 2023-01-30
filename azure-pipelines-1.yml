@@ -7,22 +7,23 @@ resources:
   repositories:
     - repository: self
       type: git
-      name: cdp-datafreshness-functionspipelines
-      ref: refs/heads/master
+      name: PR trigger-GitHub
       # trigger: none
       trigger:
         branches:
           include:
             - main
-            - develop
-            - master
-            - release/*
+           
     - repository: app
       type: github
       endpoint: Ghub
       name: trigger
       #ref: refs/heads/
-     
+      trigger:
+        branches:
+          include:
+            - main
+            - dev
             
 
 pool:
