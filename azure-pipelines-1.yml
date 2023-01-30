@@ -17,7 +17,7 @@ resources:
     - repository: app
       type: github
       endpoint: Ghub
-      name: trigger
+      name: devops7997/trigger
       #ref: refs/heads/
       trigger:
         branches:
