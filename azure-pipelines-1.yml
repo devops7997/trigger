@@ -22,11 +22,7 @@ resources:
       endpoint: Ghub
       name: trigger
       #ref: refs/heads/
-      trigger:
-        branches:
-          include:
-            - main
-            - develop
+     
             
 
 pool:
