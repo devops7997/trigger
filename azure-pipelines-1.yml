@@ -19,16 +19,15 @@ resources:
             - release/*
     - repository: app
       type: github
-      endpoint: github.com_IN010124934_EYGS
-      name: cdp-datafreshness-functions
+      endpoint: Ghub
+      name: trigger
       #ref: refs/heads/
       trigger:
         branches:
           include:
             - main
             - develop
-            - master
-            - release/*
+            
 
 pool:
   vmImage: ubuntu-latest
