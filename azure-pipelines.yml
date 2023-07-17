@@ -4,6 +4,7 @@
 # https://aka.ms/yaml
 # dont CI trigger
 # test PR tigger
+# PR trigger test with default barnch
 trigger: none
 
 pr:
