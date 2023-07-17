@@ -9,7 +9,7 @@ pr:
  branches:
    include:
      - main
-  paths: 
+ paths: 
    include:
      - azure-pipelines.yml
 
