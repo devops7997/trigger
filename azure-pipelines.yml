@@ -6,9 +6,12 @@
 trigger: none
 
 pr:
- autoCancel: true
- drafts: false
-
+ branches:
+   include:
+     - main
+  paths: 
+   include:
+     - azure-pipelines.yml
 
 pool:
   vmImage: ubuntu-latest
