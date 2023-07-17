@@ -2,18 +2,29 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-# dont CI trigger
-# test PR tigger
-# PR trigger test with default barnch
-trigger: none
 
-pr:
- branches:
-   include:
-     - main
- paths: 
-   include:
-     - azure-pipelines.yml
+resources:
+  repositories:
+    - repository: self
+      type: git
+      name: PR trigger-GitHub
+      # trigger: none
+      trigger:
+        branches:
+          include:
+            - main
+           
+    - repository: app
+      type: github
+      endpoint: Ghub
+      name: trigger
+      #ref: refs/heads/
+      trigger:
+        branches:
+          include:
+            - main
+            - dev
+            
 
 pool:
   vmImage: ubuntu-latest
