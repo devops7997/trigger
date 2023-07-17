@@ -5,6 +5,7 @@
 # dont CI trigger
 # test PR tigger
 # PR trigger test with default barnch
+# dont CI trigger
 trigger: none
 
 pr:
