@@ -9,10 +9,7 @@
 trigger: 
 - main
 
-pr:
- branches:
-   include:
-     - main
+pr: none
 
 
 pool:
