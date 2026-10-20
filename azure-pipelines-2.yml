@@ -15,9 +15,11 @@ steps:
     git -C "$(Build.SourcesDirectory)" rev-parse --is-inside-work-tree
   displayName: Pre-task diagnostics
 
-- task: ATP.ATP-GitTag.GitTag.GitTag@5
+- task: GitTag@7
+
   inputs:
     workingdir: $(Build.SourcesDirectory)
+    tagUser: devops7997
     tag: repro-$(Build.BuildId)
     # same tagUser, tagEmail, etc. as your template
 
