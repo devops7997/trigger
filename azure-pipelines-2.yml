@@ -15,7 +15,7 @@ steps:
     git -C "$(Build.SourcesDirectory)" rev-parse --is-inside-work-tree
   displayName: Pre-task diagnostics
 
-- task: GitTag@7
+- task: GitTag@5
 
   inputs:
     workingdir: $(Build.SourcesDirectory)
