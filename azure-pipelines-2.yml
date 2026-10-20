@@ -1,0 +1,26 @@
+trigger: none
+
+pool:
+  name: 7997MDP
+
+steps:
+- checkout: self
+  persistCredentials: true
+
+- script: |
+    echo "whoami: $(whoami)"
+    echo "HOME=$HOME"
+    git --version
+    ls -ld "$(Build.SourcesDirectory)" "$(Build.SourcesDirectory)/.git"
+    git -C "$(Build.SourcesDirectory)" rev-parse --is-inside-work-tree
+  displayName: Pre-task diagnostics
+
+- task: <ATP Git Tag task reference>
+  inputs:
+    workingdir: $(Build.SourcesDirectory)
+    tag: repro-$(Build.BuildId)
+    # same tagUser, tagEmail, etc. as your template
+
+- script: git ls-remote --tags origin "repro-$(Build.BuildId)"
+  displayName: Did the tag land?
+  condition: always()
