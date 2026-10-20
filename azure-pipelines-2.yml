@@ -15,7 +15,7 @@ steps:
     git -C "$(Build.SourcesDirectory)" rev-parse --is-inside-work-tree
   displayName: Pre-task diagnostics
 
-- task:  ATP.ATP-GitTag.GitTag.GitTag@5
+- task: ATP.ATP-GitTag.GitTag.GitTag@5
   inputs:
     workingdir: $(Build.SourcesDirectory)
     tag: repro-$(Build.BuildId)
